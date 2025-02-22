@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> EA MOBILE HOSTING - Admin Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.header {
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 10px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.customer-form, .bot-form {
+  background-color: greenyellow;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.customer-list, .bot-list {
+  background-color: greenyellow;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.logout-button {
+  background-color: #f00;
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span> EA MOBILE HOSTING</span>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Plans</a>
+    <a href="#">Settings</a>
+    <button class="logout-button" onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Admin Dashboard</h2>
+
+  <div class="dashboard-stats">
+    <div class="stat-box">
+      <h3>1</h3>
+      <p>Total Users</p>
+    </div>
+    <div class="stat-box">
+      <h3>0</h3>
+      <p>Active EAs</p>
+    </div>
+    <div class="stat-box">
+      <h3>0%</h3>
+      <p>Success Rate</p>
+    </div>
+  </div>
+
+  <div class="customer-form">
+    <h3>Add New Customer</h3>
+    <input type="text" placeholder="Customer Name"><br>
+    <input type="email" placeholder="Customer Email"><br>
+    <input type="text" placeholder="MT4/MT5 Account"><br>
+    <button onclick="addCustomer()">Add Customer</button>
+  </div>
+
+  <div class="customer-list">
+    <h3>Customer List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Account</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Khutso</td>
+          <td>khutsomalungane0@gmail.com</td>
+          <td>MT4</td>
+          <td>active</td>
+          <td>
+            <button onclick="activateCustomer()">Activate</button>
+            <button onclick="deleteCustomer()">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bot-form">
+    <h3>Bot Management</h3>
+    <h3>Add New Bot</h3>
+    <input type="text" placeholder="Bot Name"><br>
+    <input type="text" placeholder="Version"><br>
+    <input type="file"><br>
+    <input type="file"><br>
+    <button onclick="addBot()">Add Bot</button>
+  </div>
+
+  <div class="bot-list">
+    <h3>Available Bots</h3>
+    <div>
+      <img src="bot-image.png" alt="Bot Image" width="50"><br>
+      <span>AGGRESSIVE AI-v2</span><br>
+      <button onclick="assignBot()">Assign</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function logout() {
+  window.location.href = "http://localhost:7700/signin.html#";
+}
+
+function addCustomer() {
+  alert("Add Customer clicked!"); // Replace with actual logic
+}
+
+function activateCustomer() {
+  alert("Activate Customer clicked!"); // Replace with actual logic
+}
+
+function deleteCustomer() {
+  alert("Delete Customer clicked!"); // Replace with actual logic
+}
+
+function addBot() {
+  alert("Add Bot clicked!"); // Replace with actual logic
+}
+
+function assignBot() {
+  alert("Assign Bot clicked!"); // Replace with actual logic
+}
+</script>
+
+</body>
+</html>
